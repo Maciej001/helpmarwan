@@ -1,0 +1,47 @@
+.Timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFF6E5;
+  margin-right: 20px;
+}
+.Timer .TimerDigit {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #FF7F66;
+  padding-right: 2px;
+}
+
+.Timer .TimerText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #aaa;
+  padding-right: 15px;
+}
+
+.Timer .Header {
+  background: #FF7F66;
+  text-align: center;
+}
+
+.Display {
+  padding: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Timer {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .Timer .Header h1 {
+    font-size: 1rem;
+  }
+
+  .Timer .TimerDigit  {
+    font-size: 2rem;
+  }
+  .Timer .TimerText {
+    font-size: 1rem;
+  }
+}

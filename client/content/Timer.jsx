@@ -21,11 +21,12 @@ class Timer extends Component {
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
+
     return {
       days,
       hours,
-      minutes,
-      seconds,
+      minutes: minutes > 9 ? `${minutes}` : `0${minutes}`,
+      seconds: seconds > 9 ? `${seconds}` : `0${seconds}`,
     }
   }
 
@@ -41,8 +42,19 @@ class Timer extends Component {
   render() {
     return (
       <div className="Timer">
-        <span className="TimerDigit">{this.state.seconds}</span>
-        <span className="TimerText">seconds</span>
+        <div className="Header">
+          <h1>Marwan will have to leave Spain in</h1>
+        </div>
+        <div className="Display">
+          <span className="TimerDigit">{this.state.days}</span>
+          <span className="TimerText">days</span>
+          <span className="TimerDigit">{this.state.hours}</span>
+          <span className="TimerText">h</span>
+          <span className="TimerDigit">{this.state.minutes}</span>
+          <span className="TimerText">m</span>
+          <span className="TimerDigit">{this.state.seconds}</span>
+          <span className="TimerText">s</span>
+        </div>
       </div>
     );
   }
