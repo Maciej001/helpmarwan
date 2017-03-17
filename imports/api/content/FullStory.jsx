@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './FullStory.css'
+
 const article = [
   "My name is Maciej. I met Marwan on Twitter. This is where I look for prospective clients for the coding bootcamps I organise in exotic locations. At first, he was just a fellow geek, with an interest in a web application framework that I offered a course in. A potential client. A few tweets later, however, I realised that he was a refugee. With no money to spare on a fancy course. ",
   "Marwan used to live a comfortable middle class life, complete with a high-flying career in IT and a lovely house in the suburbs of Tripoli, where he lived with his wife and two young kids. He lost it all overnight, when civil war broke out in Libya. Determined to survive, Marwan and his family set off on a journey that was supposed to take them to the safe haven of Europe. But when they reached the border with Algeria, Marwan’s wife suffered shell shock. She didn’t know where she was, couldn’t remember her name, and no longer recognised her own family. ",

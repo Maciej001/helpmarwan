@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { saveParticipant, sendEmail } from './methods.js'
+import {
+  saveParticipant,
+  sendEmail,
+}                                from './methods.js'
 import { emailConfirmation } from './email-confirmation'
+
+import './Form.css'
 
 class Form extends Component {
   state = {
@@ -12,6 +17,7 @@ class Form extends Component {
   }
 
   sendConfirmationEmail = () => {
+    console.log(`email`, this.state.email);
     sendEmail.call(
       {
         to: this.state.email,
@@ -20,6 +26,13 @@ class Form extends Component {
       (error, result) => {
         if (error) {
           console.log(error)
+        } else {
+          this.setState({
+            name: '',
+            email: '',
+            message: '',
+            formSent: true,
+          })
         }
       }
     )
@@ -48,12 +61,7 @@ class Form extends Component {
       }
     });
 
-    this.setState({
-      name: '',
-      email: '',
-      message: '',
-      formSent: true,
-    })
+
   }
 
   render() {

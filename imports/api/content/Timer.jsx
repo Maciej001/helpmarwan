@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import './Timer.css'
 
 class Timer extends Component {
 
