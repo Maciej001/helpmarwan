@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { saveParticipant, sendEmail } from '/imports/api/content/methods.js'
 import { emailConfirmation } from './email-confirmation'
+import { Errors } from './Errors.jsx'
 
 import './Form.css'
 
@@ -10,11 +11,11 @@ class Form extends Component {
     email: '',
     message: '',
     formSent: false,
-    thankYouMessage: "Thank you! Your are a 🌟. Your message was sent! 👏"
+    thankYouMessage: "Thank you! Your are a 🌟. Your message was sent! 👏",
+    errors: [],
   }
 
   sendConfirmationEmail = () => {
-    console.log(`email`, this.state.email);
     sendEmail.call(
       {
         to: this.state.email,
@@ -38,12 +39,13 @@ class Form extends Component {
   onChange = (e) => {
     const element = e.target.dataset.id;
     const value = e.target.value;
-    this.setState({ [element]: value})
+    this.setState({
+      [element]: value,
+      errors: [],
+    })
   }
 
-  onSubmit = (e) => {
-    e.preventDefault();
-
+  newParticipant = () => {
     const participant = {
       name: this.state.name.trim(),
       email: this.state.email.trim(),
@@ -57,8 +59,30 @@ class Form extends Component {
         this.sendConfirmationEmail();
       }
     });
+  }
 
+  validateForm = () => {
+    const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let newErrors = [];
 
+    if ( this.state.name.trim() === '' )
+      newErrors = [ ...newErrors, 'Your name is missing' ]
+
+    if ( !re.test( this.state.email.trim() ) )
+      newErrors = [ ...newErrors, 'Email address is missing or is incorrect' ]
+
+    if ( this.state.message.trim() === '' )
+      newErrors = [ ...newErrors, "Don't forget to add message, please." ]
+
+    this.setState({ errors: newErrors });
+    if (newErrors.length === 0) {
+      this.newParticipant()
+    }
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.validateForm();
   }
 
   render() {
@@ -76,6 +100,9 @@ class Form extends Component {
                 <textarea type="text" value={this.state.message} data-id="message" onChange={this.onChange} rows="5" cols="60" placeholder="Tell us how you can help, please?"/>
                 <button onClick={this.onSubmit}>Send Message</button>
               </form>
+              { !!this.state.errors.length &&
+                <Errors errors={ this.state.errors } />
+              }
             </div>
           : <div className="ThankYou">
             <h1>{this.state.thankYouMessage}</h1>
