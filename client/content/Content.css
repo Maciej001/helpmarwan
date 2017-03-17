@@ -1,0 +1,10 @@
+.Content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.Content .TopImage {
+  width: 50%;
+}
