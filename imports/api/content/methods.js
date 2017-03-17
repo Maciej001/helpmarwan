@@ -9,7 +9,6 @@ export const saveParticipant = new ValidatedMethod({
   validate: Participants.Schema.validator(),
   run( participant ) {
     if ( Meteor.isServer ) {
-      console.log('method called')
       return Participants.insert({ ...participant, createdAt: new Date() })
     }
   }

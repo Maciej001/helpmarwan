@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  saveParticipant,
-  sendEmail,
-}                                from './methods.js'
+import { saveParticipant, sendEmail } from '/imports/api/content/methods.js'
 import { emailConfirmation } from './email-confirmation'
 
 import './Form.css'
