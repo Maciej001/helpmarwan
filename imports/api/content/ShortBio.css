@@ -1,15 +1,26 @@
 .ShortBio {
   padding: 40px 0 20px 0;
 }
+
+.ShortBioParagraph {
+  display: flex;
+}
+
 .ShortBio h1 {
   color: #2185C5;
-  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.ShortBio p {
-  font-family: "Times New Roman", Georgia, Serif;
-  font-size: 1.4em;
-  color: #555;
+.ShortBioParagraph .TopImageWrapper {
+  flex: 1 1 auto;
+  padding-right: 20px;
+}
+
+.ShortBioParagraph .TopImageWrapper .TopImage {
+  width: 100%;
+}
+
+.ShortBio .ShortBioText {
+  flex: 2 2 auto;
 }

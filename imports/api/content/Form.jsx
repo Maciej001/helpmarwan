@@ -90,7 +90,7 @@ class Form extends Component {
       <div className="Form">
         { this.state.formSent === false
           ? <div>
-              <h1>Contact Maciej to help Marwan or scroll down to read the full story.</h1>
+              <h1>Contact us to get in touch with Marwan</h1>
               <form onSubmit={this.onSubmit}>
                 <label>Name</label>
                 <input type="text" value={this.state.name} data-id="name" onChange={this.onChange}/>
@@ -105,7 +105,7 @@ class Form extends Component {
               }
             </div>
           : <div className="ThankYou">
-            <h1>{this.state.thankYouMessage}</h1>
+            <h2>{this.state.thankYouMessage}</h2>
           </div>
         }
       </div>

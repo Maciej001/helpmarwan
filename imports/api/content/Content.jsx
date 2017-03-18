@@ -11,9 +11,5 @@ export const Content = ({}) => (
       <ShortBio />
     </div>
 
-    <div className="TopImageWrapper">
-      <img className="TopImage" src="https://s3.eu-west-2.amazonaws.com/helpmarwan/marwan7.jpg" alt=""/>
-    </div>
-
   </div>
 );

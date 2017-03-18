@@ -3,6 +3,6 @@ import './Header.css'
 
 export const Header = ({}) => (
   <div className="Header">
-    <h1>Help Marwan 🙏</h1>
+    <h3>Help Marwan 🙏</h3>
   </div>
 );

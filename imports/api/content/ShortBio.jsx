@@ -3,10 +3,19 @@ import './ShortBio.css'
 
 export const ShortBio = ({}) => (
   <div className="ShortBio">
-    <h1>Can you help to find a 1-year contract for Marwan? If he gets it he can stay in Spain. It can save his and his kids life!</h1>
-    <p>The clock is ticking on Marwan, who in his previous life was a computer engineer in Libya.
-       His temporary refugee ID in Spain will expire on the 20 April, and he will be sent back, together with his two young kids, to the war-torn Libya.
-       Unless… he gets a one-year full-time job contract.
-    </p>
+    <h1>Do you know someone who can hire Marwan in web development? A 1-year contract can save his and his kids life!</h1>
+
+    <div className="ShortBioParagraph">
+      <div className="TopImageWrapper">
+        <img className="TopImage" src="https://s3.eu-west-2.amazonaws.com/helpmarwan/marwan8.jpg" alt=""/>
+      </div>
+      <div className="ShortBioText">
+        <p>
+          Before the war in Libya, Marwan was a computer engineer just like you and me. Today he is a refugee living in Spain.
+           His temporary residence permit expires on April 20th, and he will be sent back, together with his two young kids, to the war-torn Libya.
+           Unless he gets a one year full-time job contract.
+        </p>
+      </div>
+    </div>
   </div>
 );

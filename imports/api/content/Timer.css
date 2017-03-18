@@ -6,14 +6,13 @@
   margin-right: 20px;
 }
 .Timer .TimerDigit {
-  font-size: 5rem;
+  font-size: 300%;
   font-weight: bold;
   color: #FF7F66;
   padding-right: 2px;
 }
 
 .Timer .TimerText {
-  font-size: 2rem;
   font-weight: bold;
   color: #aaa;
   padding-right: 15px;
@@ -21,6 +20,7 @@
 
 .Timer .Header {
   background: #FF7F66;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
 
@@ -32,16 +32,5 @@
   .Timer {
     padding: 0;
     margin-right: 0;
-  }
-
-  .Timer .Header h1 {
-    font-size: 1rem;
-  }
-
-  .Timer .TimerDigit  {
-    font-size: 2rem;
-  }
-  .Timer .TimerText {
-    font-size: 1rem;
   }
 }

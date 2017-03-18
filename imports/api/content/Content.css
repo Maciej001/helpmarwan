@@ -1,22 +1,12 @@
 .Content {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 2%;
-  display: flex;
+  max-width: 780px;
+  margin: 40px auto 0 auto;
+  padding: 0 3%;
   align-items: flex-start;
 }
 
-.Content .TopImageWrapper {
-  flex: 1 1 auto;
-}
-
-.TopImage {
-  width: 100%;
-}
-
 .ShortStory {
-  flex: 1 1 auto;
   width: 100%;
 }
 

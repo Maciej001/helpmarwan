@@ -9,8 +9,13 @@
   background: #FF7F66;
 }
 
+@media only screen and (max-width: 768px) {
+  .Form form {
+    padding: 20px;
+  }
+}
+
 .Form h1 {
-  font-size: 2.5em;
   font-weight: bold;
   color: #FF7F66;
   margin-bottom: 20px;
@@ -23,8 +28,7 @@
   outline: none;
   border-radius: 5px;
   color: #555;
-  font-size: 1.5em;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .Form form textarea {
@@ -34,13 +38,11 @@
   border-radius: 5px;
   color: #555;
   background: white;
-  font-size: 1.5em;
-  padding: 20px;
+  padding: 10px;
 }
 
 .Form form label {
   color: rgba(255,255,255, 0.85);
-  font-size: 1.5em;
 }
 
 .Form form button {
@@ -51,7 +53,6 @@
   background: #2185C5;
   color: white;
   border-radius: 5px;
-  font-size: 1.5rem;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.25);
   cursor: pointer;
 }
@@ -70,8 +71,7 @@
   background: #35A63D;
 }
 
-.Form .ThankYou h1 {
+.Form .ThankYou h2 {
   color: rgba(255,255,255, 0.85);
-  font-size: 1.5em;
   padding: 20px 40px;
 }

@@ -1,6 +1,5 @@
 .FullStory h1 {
   color: #2185C5;
-  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -13,21 +12,18 @@
 }
 
 .FullStory .Paragraph p {
-  font-family: "Times New Roman", Georgia, Serif;
-  font-size: 1.4em;
-  color: #555;
   padding-bottom: 30px;
 }
 
 .FullStory .Paragraph .Image {
   display: block;
-  width: 70%;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .FullStory .Paragraph .Subtitle {
+  font-size: 125%;
   color: #888;
-  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 768px) {

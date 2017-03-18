@@ -44,7 +44,7 @@ class Timer extends Component {
     return (
       <div className="Timer">
         <div className="Header">
-          <h1>Marwan will have to leave Spain in</h1>
+          <h3>Marwan will have to leave Spain in</h3>
         </div>
         <div className="Display">
           <span className="TimerDigit">{this.state.days}</span>

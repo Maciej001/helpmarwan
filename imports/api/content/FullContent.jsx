@@ -7,5 +7,6 @@ export const FullContent = ({}) => (
   <div className='FullContent'>
     <Form />
     <FullStory />
+    <Form />
   </div>
 );
