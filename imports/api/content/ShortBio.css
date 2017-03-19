@@ -19,8 +19,18 @@
 
 .ShortBioParagraph .TopImageWrapper .TopImage {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .ShortBio .ShortBioText {
   flex: 2 2 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .ShortBioParagraph {
+    flex-direction: column;
+  }
+  .ShortBioParagraph .TopImageWrapper {
+    padding-right: 0;
+  }
 }

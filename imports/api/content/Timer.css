@@ -33,4 +33,8 @@
     padding: 0;
     margin-right: 0;
   }
+
+  .Timer .TimerDigit {
+    font-size: 200%;
+  }
 }

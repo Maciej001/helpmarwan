@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 175%;
 }
 h2 {
   font-size: 150%;
@@ -24,6 +24,21 @@ h3 { font-size: 120%; }
 
 input, textarea, label, button, span {
   font-size: 150%;
+}
+
+a {
+  font-family: "Times New Roman", Georgia, Serif;
+  color: #2185C5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2185C5;
+  text-decoration: underline;
+}
+
+a.LinkImage {
+  font-family: Arial, sans-serif;
 }
 
 p {
